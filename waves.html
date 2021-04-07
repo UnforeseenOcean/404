@@ -1,0 +1,141 @@
+<html>
+<meta charset="utf-8">
+
+<head>
+    <title>404</title>
+    <style>
+        /* best seen at 1500px or less */
+        /* Original: https://codepen.io/tedmcdo/pen/PqxKXg */
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background: linear-gradient(rgb(86, 85, 142), rgb(228, 104, 68));
+            background-attachment: fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .error-container {
+            display: block;
+            align-items: center;
+            text-align: center;
+            z-index: 100;
+            font-family: Source Sans, Open Sans, Helvetica, Arial, sans-serif;
+            color: white;
+            margin-top: 250px;
+        }
+
+        .error-text-small {
+            font-weight: 600;
+            margin-bottom: -40px;
+        }
+
+        .error-text-big {
+            font-weight: 700;
+            font-size: 12em;
+            display: inline;
+        }
+
+        .error-subtext {
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-top: -20px;
+        }
+
+        .ocean {
+            height: 5%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #015871;
+        }
+
+        .wave {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198' class='mozwebext'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3E%3Cstop stop-color='%2357BBC1' stop-opacity='.25' offset='0%25'/%3E%3Cstop stop-color='%23015871' offset='100%25'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23a)' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z' transform='matrix(-1 0 0 1 1600 0)'/%3E%3C/svg%3E") repeat-x;
+            position: absolute;
+            top: -198px;
+            width: 6400px;
+            height: 198px;
+            animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            font-family: sans-serif;
+            font-weight: 300;
+            font-stretch: condensed;
+            color: white;
+            font-size: 0.8em;
+            transition: opacity 0.25s ease-in-out;
+            opacity: 0.35;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .footer:hover {
+            opacity: 1;
+        }
+
+        .wave:nth-of-type(2) {
+            top: -175px;
+            animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 10s ease -1.25s infinite;
+            opacity: 1;
+        }
+
+        @keyframes wave {
+            0% {
+                margin-left: 0;
+            }
+
+            100% {
+                margin-left: -1600px;
+            }
+        }
+
+        @keyframes swell {
+
+            0%,
+            100% {
+                transform: translate3d(0, -25px, 0);
+            }
+
+            50% {
+                transform: translate3d(0, 20px, 0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="error-container" title="Have a rest, take a deep breath">
+        <div class="error-text-small">
+            You've got a
+        </div>
+        <div class="error-text-big">
+            404
+        </div>
+        <div class="error-subtext" >
+            Maybe you typed it wrong?
+        </div>
+    </div>
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <div class="footer">This version is &copy; 2021 Blackbeard CC-SA. <a href="https://codepen.io/tedmcdo/pen/PqxKXg" rel="author" target="_blank">Original by Ted McDonald</a></div>
+</body>
+
+</html>
